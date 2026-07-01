@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India Industry Digest — July 1, 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+:root {
+  --bg:#0e0b10; --surface:#16121a; --surface2:#1f1a26; --surface3:#271f30; --border:#2e2638;
+  --accent:#c87fa0; --accent2:#7ec8a0; --accent3:#a78bfa; --gold:#e8c97a; --danger:#f06f6f;
+  --text:#f0eaf5; --muted:#6d6280; --pearl:#e8e0f0;
+  --mono:'JetBrains Mono',monospace; --display:'DM Serif Display',serif; --sans:'Inter',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13px;min-height:100vh}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px;background:var(--surface);border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--accent));display:flex;align-items:center;justify-content:center;font-size:14px}
+.brand-name{font-family:var(--display);font-size:17px;color:var(--pearl);letter-spacing:.02em}
+.brand-sub{font-size:10px;color:var(--muted);font-family:var(--mono);letter-spacing:.06em;margin-top:-2px}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.sync-label{font-family:var(--mono);font-size:10px;color:var(--accent2)}
+.date-chip{font-family:var(--mono);font-size:10px;color:var(--muted);border:1px solid var(--border);padding:4px 10px;border-radius:4px}
+.content{max-width:1120px;margin:0 auto;padding:22px 24px 60px;display:flex;flex-direction:column;gap:16px}
+.digest-hero{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.digest-title{font-family:var(--display);font-size:24px;color:var(--gold);margin-bottom:4px}
+.digest-sub{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.sentiment-chip{font-family:var(--mono);font-size:10.5px;padding:5px 12px;border-radius:20px;border:1px solid var(--border);display:inline-flex;align-items:center;gap:7px}
+.s-dot{width:8px;height:8px;border-radius:50%}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 15px}
+.kpi-label{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.kpi-value{font-family:var(--mono);font-size:22px;font-weight:600;margin-bottom:4px}
+.kpi-delta{font-size:10px}
+.up{color:var(--accent2)}.down{color:var(--danger)}.warn{color:var(--gold)}.neu{color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px}
+.card-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.card-title{font-size:12.5px;font-weight:600;color:var(--text)}
+.card-sub{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl thead th{text-align:left;padding:6px 10px;font-family:var(--mono);font-size:9px;color:var(--muted);border-bottom:1px solid var(--border);letter-spacing:.07em;text-transform:uppercase}
+.tbl tbody tr{border-bottom:1px solid var(--border)}
+.tbl tbody tr:last-child{border-bottom:none}
+.tbl tbody td{padding:9px 10px}
+.tbl tbody tr:hover{background:var(--surface2)}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:9px;font-weight:700;font-family:var(--mono);letter-spacing:.04em}
+.b-green{background:rgba(126,200,160,.15);color:var(--accent2)}
+.b-rose{background:rgba(200,127,160,.15);color:var(--accent)}
+.b-gold{background:rgba(232,201,122,.15);color:var(--gold)}
+.b-red{background:rgba(240,111,111,.15);color:var(--danger)}
+.b-violet{background:rgba(167,139,250,.15);color:var(--accent3)}
+.b-grey{background:rgba(109,98,128,.2);color:var(--muted)}
+.digest-panel{background:var(--surface2);border:1px solid var(--gold);border-radius:8px;padding:16px}
+.digest-panel-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.digest-panel-title{font-family:var(--display);font-size:16px;color:var(--gold)}
+.digest-out{display:flex;flex-direction:column;gap:10px}
+.digest-card{border-radius:6px;padding:12px 14px;font-size:12.5px;line-height:1.75;border-left:3px solid var(--gold);background:var(--surface)}
+.digest-card.launch{border-left-color:var(--accent)}
+.digest-card.opp{border-left-color:var(--accent2)}
+.digest-card.trend{border-left-color:var(--accent3)}
+.digest-card.risk{border-left-color:var(--danger)}
+.dc-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.dc-tag{font-size:8px;padding:1px 6px;border-radius:8px;background:rgba(232,201,122,.15);color:var(--gold)}
+.dc-body b{color:var(--text)}
+.dc-meta{margin-top:8px;font-family:var(--mono);font-size:9.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.insight{padding:10px 14px;border-radius:0 6px 6px 0;font-size:12px;line-height:1.75;border-left:3px solid var(--accent3);background:var(--surface)}
+.insight.warn{border-left-color:var(--gold)}
+.insight.good{border-left-color:var(--accent2)}
+.insight.risk{border-left-color:var(--danger)}
+.insight.opp{border-left-color:var(--accent)}
+.insight-lbl{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.stat-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--border)}
+.stat-row:last-child{border-bottom:none}
+.stat-label{flex:1;color:var(--muted);font-size:11px}
+.stat-bar-wrap{width:110px}
+.stat-bar{height:4px;background:var(--surface3);border-radius:2px}
+.stat-fill{height:4px;border-radius:2px}
+.stat-val{font-family:var(--mono);font-size:11px;min-width:70px;text-align:right}
+.empty-note{font-size:12.5px;color:var(--muted);font-style:italic;padding:4px 0}
+.footer-note{margin-top:20px;padding-top:14px;border-top:1px solid var(--border);font-size:10.5px;color:var(--muted);font-family:var(--mono)}
+@media (max-width:820px){.g2,.kpi-strip{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">🧪</div>
+    <div>
+      <div class="brand-name">India Industry Digest</div>
+      <div class="brand-sub">Cosmetic Chemistry Intelligence · India Only</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div style="display:flex;align-items:center;gap:6px"><div class="sync-dot"></div><span class="sync-label">Live Research</span></div>
+    <div class="date-chip">01-Jul-2026</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="digest-hero">
+    <div>
+      <div class="digest-title">India Industry Digest</div>
+      <div class="digest-sub">Cosmetic Chemistry · Personal Care · Home Care · Specialty Chemicals · India Only · 01-Jul-2026</div>
+    </div>
+    <div class="sentiment-chip"><span class="s-dot" style="background:var(--gold)"></span>Neutral / Cautious</div>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi"><div class="kpi-label">Regulatory Alerts</div><div class="kpi-value" style="color:var(--gold)">2</div><div class="kpi-delta warn">CDSCO / BIS</div></div>
+    <div class="kpi"><div class="kpi-label">Ingredient Trends</div><div class="kpi-value" style="color:var(--accent3)">2</div><div class="kpi-delta neu">India-relevant</div></div>
+    <div class="kpi"><div class="kpi-label">Supply / Raw Material Risks</div><div class="kpi-value" style="color:var(--danger)">1</div><div class="kpi-delta down">Monitor closely</div></div>
+    <div class="kpi"><div class="kpi-label">Sales Opportunities</div><div class="kpi-value" style="color:var(--accent2)">5</div><div class="kpi-delta up">Identified</div></div>
+  </div>
+
+  <!-- REGULATORY & COMPLIANCE -->
+  <div class="digest-panel">
+    <div class="digest-panel-hd">
+      <div><div class="digest-panel-title">⚠ Regulatory &amp; Compliance — India</div></div>
+      <span class="badge b-gold">CDSCO / BIS</span>
+    </div>
+    <div class="digest-out">
+      <div class="digest-card risk">
+        <div class="dc-label">⚠️ CDSCO Reaffirms Cosmetics-for-External-Use-Only, Warns on Injectable Products<span class="dc-tag">HIGH</span></div>
+        <div class="dc-body">On May 18, 2026, CDSCO issued a public notice clarifying that cosmetics are strictly for external, non-invasive use and that products in injectable form do not meet the legal definition of a cosmetic. <b>Impact:</b> aesthetic-adjacent brands (skin boosters, "injectable-style" serums) marketed loosely as cosmetics face heightened compliance and labeling risk. <b>Action:</b> audit client SKUs with ambiguous injectable-adjacent claims before Q3 filings.</div>
+        <div class="dc-meta"><span>Source: CDSCO / SCC Times</span><span>Published: 18-May-2026</span><span>Confidence: High</span></div>
+      </div>
+      <div class="digest-card">
+        <div class="dc-label">📋 BIS Scheme X (Omnibus Technical Regulation) Certification Deadline Extended<span class="dc-tag">MEDIUM</span></div>
+        <div class="dc-body">BIS certification under the omnibus technical regulation order 2024 has reportedly been extended to September 1, 2026. <b>Impact:</b> extra runway for import-dependent raw material suppliers to complete certification without shipment disruption. <b>Action:</b> front-load paperwork rather than relying on the extension as a buffer.</div>
+        <div class="dc-meta"><span>Source: Secondary compliance advisory — verify via bis.gov.in</span><span>Confidence: Medium</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <!-- INGREDIENT TRENDS -->
+    <div class="card">
+      <div class="card-hd"><div class="card-title">🔬 Ingredient Trends — India Relevant</div><div class="card-sub">Directional, sourced from supplier launches</div></div>
+      <div class="stat-row">
+        <div class="stat-label">Biotech ceramides &amp; peptides (Croda Matrixyl next-gen, DS-Ceramide Y3S)</div>
+        <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill" style="width:82%;background:var(--accent)"></div></div></div>
+        <div class="stat-val" style="color:var(--accent)">Rising</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-label">Biotech peptide bond-repair (DSM-Firmenich OXY 229 CB)</div>
+        <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill" style="width:58%;background:var(--accent3)"></div></div></div>
+        <div class="stat-val" style="color:var(--accent3)">Emerging</div>
+      </div>
+      <div class="empty-note">Bar length reflects relative momentum from sourced supplier launches, not a measured adoption statistic.</div>
+    </div>
+
+    <!-- SUPPLY / RAW MATERIAL IMPACT ON INDIA -->
+    <div class="card">
+      <div class="card-hd"><div class="card-title">🚢 Raw Material &amp; Supply Impact — India</div></div>
+      <div class="insight risk">
+        <div class="insight-lbl">Indonesia DSI Export Centralization</div>
+        Since June 1, 2026, Indonesian crude palm oil exports (the feedstock behind fatty alcohols, glycerin and surfactants Indian importers rely on) must route through state entity PT DSI, with full control targeted by Jan 1, 2027. Expect documentation friction and potential landed-cost increases for Indian oleochemical buyers through Q3–Q4 2026. Diversify toward Malaysian sourcing and lock contracts before the September phase-2 transition.
+      </div>
+    </div>
+  </div>
+
+  <!-- SALES OPPORTUNITIES -->
+  <div class="card">
+    <div class="card-hd"><div class="card-title">🎯 Sales Opportunities — India</div><div class="card-sub">Filtered from Sales Intelligence</div></div>
+    <table class="tbl">
+      <thead><tr><th>Opportunity</th><th>Customer Segment</th><th>Ingredient Category</th><th>Recommended Action</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge b-green">SALES</span></td><td>Skincare / Derma-cosmetic OEMs</td><td>Biotech ceramides, peptides</td><td>Pitch new fermentation-derived actives to Indian skincare formulators seeking barrier-repair and anti-aging claims</td></tr>
+        <tr><td><span class="badge b-violet">CROSS-SELL</span></td><td>Haircare / Private Label</td><td>Biotech peptide bond-repair</td><td>Introduce to Indian haircare clients developing damage-repair or bond-technology lines</td></tr>
+        <tr><td><span class="badge b-gold">INVENTORY</span></td><td>Home Care, Personal Care importers</td><td>Fatty alcohols, glycerin, palm-derived surfactants</td><td>Lock near-term pricing on Asia C12-14 fatty alcohols before DSI phase-2 tightens Indonesian supply from September</td></tr>
+        <tr><td><span class="badge b-red">SUPPLY RISK</span></td><td>All segments sourcing Indonesian palm-derived materials</td><td>Glycerin, fatty alcohols, PKO derivatives</td><td>Diversify supplier base toward Malaysia/non-palm alternatives; renegotiate contracts ahead of Sep 1 DSI transition</td></tr>
+        <tr><td><span class="badge b-gold">REGULATORY</span></td><td>Cosmetic / Aesthetic brands (India)</td><td>N/A — claims/format compliance</td><td>Flag CDSCO's injectable-cosmetics notice to Indian clients with ambiguous delivery-format products</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MARKET PULSE -->
+  <div class="card">
+    <div class="card-hd"><div class="card-title">📈 Market Pulse — India</div><div class="card-sub">Source: MarkNtel Advisors, India Cosmetics Chemicals Market Forecast 2026–2030</div></div>
+    <div class="stat-row">
+      <div class="stat-label">India Cosmetic Chemicals Market Size (2025)</div>
+      <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill" style="width:61%;background:var(--accent2)"></div></div></div>
+      <div class="stat-val" style="color:var(--accent2)">$688M</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Projected Size by 2030</div>
+      <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill" style="width:100%;background:var(--gold)"></div></div></div>
+      <div class="stat-val" style="color:var(--gold)">$1,132M</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">CAGR (2026–30)</div>
+      <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill" style="width:66%;background:var(--accent3)"></div></div></div>
+      <div class="stat-val" style="color:var(--accent3)">10.47%</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-label">Largest sub-segment</div>
+      <div class="stat-bar-wrap"><div class="stat-bar"><div class="stat-fill" style="width:70%;background:var(--accent)"></div></div></div>
+      <div class="stat-val" style="color:var(--accent)">Surfactants</div>
+    </div>
+  </div>
+
+  <div class="footer-note">Compiled by India Industry Digest (Nexus format) skill · Regulatory and supply-chain items reused from prior research this session · Market Pulse sourced from MarkNtel Advisors · Verify CDSCO/BIS items via cdsco.gov.in / bis.gov.in before acting on deadlines.</div>
+
+</div>
+</body>
+</html>
